@@ -1,28 +1,39 @@
 import java.util.*;
-// main class
+import java.util.*;
 public class Arraylist_database {
- 
-    // Main driver method
+    public void  display(ArrayList name,ArrayList roll,ArrayList sem,ArrayList CGPA){
+        for (int i = 0; i < name.size(); i++) {
+            System.out.print(name.get(i) + " ");
+            System.out.print(roll.get(i) + " ");
+            System.out.print(sem.get(i) + " ");
+            System.out.print(CGPA.get(i) + " ");
+            System.out.println();
+        }
+    }
     public static void main(String args[])
     {
-        // Creating an Arratlist object of string type
-        ArrayList<String> al = new ArrayList<>();
- 
-        // Adding elements to Arraylist
-        // Custom input elements
-        al.add("Geeks");
-        al.add("Geeks");
- 
-        // Adding specifying the index to be added
-        al.add(1, "Geeks");
- 
-        // Printing the Arraylist elements
-        System.out.println("Initial ArrayList " + al);
- 
-        // Setting element at 1st index
-        al.set(1, "For");
- 
-        //  Printing the updated Arraylist
-        System.out.println("Updated ArrayList " + al);
+        ArrayList<String> name = new ArrayList<>();
+        ArrayList<Integer> roll =new ArrayList<>();
+        ArrayList<Integer> sem =new ArrayList<>();
+        ArrayList<Float> CGPA =new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Do you want to enter a new student data? y/n:");
+        char flag=sc.next().charAt(0);
+        while(flag=='y'||flag=='Y'){
+            sc.nextLine();
+            System.out.println("enter student name");
+            name.add(sc.nextLine());
+            System.out.println("enter student Roll");
+            roll.add(sc.nextInt());
+            System.out.println("enter student Semester");
+            sem.add(sc.nextInt());
+            System.out.println("enter student CGPA");
+            CGPA.add(sc.nextFloat());
+            System.out.println("Add more data? y/n");
+            flag=sc.next().charAt(0);
+        }
+        sc.close();
+        Arraylist_database ob =new Arraylist_database();
+        ob.display(name,roll,sem,CGPA);   
     }
 }
