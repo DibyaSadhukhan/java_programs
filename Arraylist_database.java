@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.*;
 public class Arraylist_database {
     public void  display(ArrayList name,ArrayList roll,ArrayList sem,ArrayList CGPA){
         for (int i = 0; i < name.size(); i++) {
