@@ -4,7 +4,7 @@ public class prime_series{
             return false;      
         }
         else{  
-            for(i=2;i<=n/2;i++){      
+            for(int i=2;i<=n/2;i++){      
                 if(n%i==0){      
                     return false;
                 }
@@ -16,8 +16,9 @@ public class prime_series{
         prime_series ob= new prime_series();
         for (int i =2;i<1000;i++){
             if (ob.primecheck(i)){
-                System.out.println(i);
+                System.out.print(i+",");
             }
         }
+        System.out.println();
     }      
 }
